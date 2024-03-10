@@ -1,24 +1,13 @@
 ---
 layout: default
-title: Chulapa on remote
-header_type: hero
-subtitle: Starter pack
+title: A Developer's Journey
+header_type: image
+header_img: "https://www.pexels.com/photo/mosaic-alien-on-wall-1670977"
+subtitle: One line of code at a time
+categories: [index]
 ---
+This site is a collection of 20+ years of tickering, research, caffeine nights and more around my journey as a developer.  Each bug solved and syntax error conquered, I learnt something that might (or not) be useful to someone else.
 
-Click [**Use this template**](https://github.com/dieghernan/chulapa-101/generate) button above for cloning this repo and get started with [Chulapa Jekyll theme](https://github.com/dieghernan/chulapa).
+I used (and abused) a lot from Stack Overflow over the years so I will try to give back as much as I can to the community with this [blog](https://oaxley.github.io/blog/).
 
-Contains basic configuration to get you a site with:
-
-- Sample posts and [paginated blog index](./blog/).
-- Sample collection with Markdown and kramdown cheatsheets and [collection index](./cheatsheets).
-- Archive pages for posts grouped by year, category, and tag.
-- Demo page with the different Bootstrap components and how they look with the actual skin settings.
-- Sample 404 page.
-- Site search with Lunr.
-- Sample `_config` with minimal configuration. `primary` color is set to <span class="text-primary">LightSkyBlue</span> and `autothemer` is enabled. [Learn how to customize your site](https://dieghernan.github.io/chulapa/docs/03-theming).
-- Sample `algolia-search.yml` for using Algolia+GitHub Actions.
-- Sample files for extending the theme with your own scripts and css.
-
-On addition, `jekyll-sitemap` generates your sitemap on [./sitemap.xml](./sitemap.xml), and Chulapa generates an Atom feed on [./atom.xml](./atom.xml) and a RSS 2.0 feed on [./rss.xml](./rss.xml).
-
-[Configure as necessary](https://dieghernan.github.io/chulapa/docs/02-config) and replace sample content with your own.
+If you find something useful here, don't hesitate to send me an [email](mailto:oaxley@duck.com).
