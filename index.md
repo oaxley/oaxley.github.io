@@ -2,7 +2,7 @@
 layout: default
 title: A Developer's Journey
 header_type: image
-header_img: "https://www.pexels.com/photo/mosaic-alien-on-wall-1670977"
+header_img: https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg
 subtitle: One line of code at a time
 categories: [index]
 ---
