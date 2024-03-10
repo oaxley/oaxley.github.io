@@ -1,8 +1,7 @@
 ---
-layout: default
-title: A Developer's Journey
-header_type: image
+header_type: "hero"
 header_img: https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg
+title: A Developer's Journey
 subtitle: One line of code at a time
 categories: [index]
 ---
