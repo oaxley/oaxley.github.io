@@ -107,8 +107,6 @@ navbar:
         url   : /categories
       - title : Archive
         url   : /archive
-      - title : Current skin
-        url   : /current-skin
 
 # Social links to be placed on your site footer
 footer:
