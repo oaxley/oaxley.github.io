@@ -1,0 +1,107 @@
+
+# A simple Finite State Machine in Python
+
+Wikipedia definition summarizes it best. A Finite State Machine (FSM) is an abstract machine that 
+can be in exactly one of a finite number of states at any given time. 
+The FSM moves from one state to another, also called a transition, in response to an event. There 
+can be only a predetermined number of transitions and events defined during the conception of the 
+FSM. 
+
+FSM is a very simple paradigm that can be applied easily to any kind of situations. The turnstile 
+that filters the people at the entrance of the museum, traffic lights or even network protocols. 
+The subject is so vast that it has its own field of research: Automata Theory.
+
+FSM are very easy to implement and it makes the perfect toy project for a weekend.
+
+## **How does it work?**
+
+The first step is to declare your states, events, and transitions. Each element has its own class.
+
+``` python
+class State:
+    """ definition of an FSM state """
+
+class Event:
+    """ definition of an FSM event """
+
+class Transition:
+    """ definition of an FSM transition """
+```
+
+Next, you will need to instantiate the main class. To work, this class needs 3 important things:
+
+- The transitions you defined in the first step
+- A user queue to communicate between the FSM and the client
+- A user callback that is added to the queue every time an event is triggered
+
+``` python
+# user queue
+user_queue = queue.Queue()
+
+# user callback
+def user_callback(action):
+    pass
+
+[...]
+
+# define FSM
+myFSM = FSM()
+myFSM.setup(user_callback, user_queue)
+myFSM.add(transitions)
+```
+
+The second step is to start the FSM. It is an error if no initial states are present in the FSM. 
+All errors are based on a generic exception and raised accordingly.
+
+``` python
+class FSMError(Exception):
+    """ generic Exception for the FSM """
+```
+
+The last step occurs in the client. Depending on the event, the client updates the FSM using the 
+“update” function.
+
+## **But wait, there is more...**
+
+If you have only few states and transitions, it is fine to define them inside your client. It is only a 
+few lines of code. But when the number starts to grow, it becomes a nightmare to maintain and 
+update. So, we get you covered.
+
+Along with the normal way, the library is built with the availability to create a FSM from a YAML definition.
+
+``` python
+class FSMBuilder:
+    """ Build a FSM from a YAML definition file """
+```
+
+You define everything from the comfort of your editor, call the proper class, add the user queue 
+and callback and voila! In no time your FSM is up and ready.
+
+``` yaml
+Events:
+  - E.OFF
+  - E.ON
+[...]
+States:
+  - name: S.OFF
+    type: BEGIN
+    enter: "off"
+    exit: ""
+[...]
+Transitions:
+  - event: E.ON
+    begin: S.OFF
+    end: S.ON
+```
+
+However, you still have to implement the logic behind every event, but at least the creation is 
+automatic.
+
+## **Where can you find it?**
+
+The library is available on the [GitHub](https://github.com/oaxley/pyfsm) repository 
+
+On the GitHub repository, we added two examples. One with the creation of an FSM inside the 
+client and the other one from a YAML file.
+They both simulate the same NavCom like the Bendix/King 
+[KY196](http://avionicsmasters.com/avionics/comms/bendix-king-ky-196.html).
