@@ -103,8 +103,6 @@ navbar:
     child   :
       - title : Tags
         url   : /tags
-      - title : Categories
-        url   : /categories
       - title : Archive
         url   : /archive
 
@@ -174,7 +172,7 @@ defaults:
       show_sociallinks  : true
       show_comments     : true
       show_tags         : true
-      show_categories   : true
+      show_categories   : false
       show_author       : true
       show_breadcrumb   : true
       breadcrumb_list   :
