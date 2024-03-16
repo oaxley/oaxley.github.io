@@ -169,7 +169,7 @@ defaults:
       show_date         : true
       show_related      : true
       show_bottomnavs   : true
-      show_sociallinks  : true
+      show_sociallinks  : false
       show_comments     : true
       show_tags         : true
       show_categories   : false
