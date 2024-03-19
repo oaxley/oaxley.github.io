@@ -38,10 +38,12 @@ Let's $$L_1$$ be the reference Line, we have:
 
 $$ 
 R_1 = \dfrac{L_1}{L_1} = 1.0 
-$$  
+$$
+
 $$ 
 R_2 = \dfrac{L_1}{L_2} = x 
 $$  
+
 $$ 
 R_3 = \dfrac{L_1}{L_3} = y 
 $$  
@@ -51,7 +53,7 @@ For example:
 If $$L_1 = 10ms$$, $$L2 = 15ms$$, and $$L3 = 19ms$$, then we have:
 
 $$ 
-R_1 = 1.0, R_2 = 0.67 and R_3 = 0.53
+R_1 = 1.0, R_2 = 0.67, and R_3 = 0.53
 $$
 
 ## Target Ratio
@@ -100,7 +102,7 @@ $$
 L_1 = 10ms, L_2 = 15ms, L_3 = 19ms
 $$
 
-1. We compute the ratio of each lines:
+2. We compute the ratio of each lines:
 
 $$
 R_1 = \dfrac{L_1}{L_1} = 1.00 
@@ -115,13 +117,13 @@ R_3 = \dfrac{L_1}{L_3} = 0.53
 $$  
 
 
-1. From here, we can compute $T_1$:
+3. From here, we can compute $$T_1$$:
 
 $$
 T_1 = \dfrac{1.0}{\sum_{1}^{n}R_n} = \dfrac{1.0}{1.0 + 0.67 + 0.53} = \dfrac{1.0}{2.19} = 0.46
 $$
 
-1. Then each target ratio for the remaining lines
+4. Then each target ratio for the remaining lines
 
 $$ 
 T_2 = T_1 \times R_2 = 0.46 \times 0.67 = 0.30 
@@ -131,7 +133,7 @@ $$
 T_3 = T_1 \times R_3 = 0.46 \times 0.53 = 0.2 
 $$  
 
-For the last line, we can also compute $T_3$ with:
+For the last line, we can also compute $$T_3$$ with:
 
 $$ 
 T_3 = 1 - \sum_{i=1}^{2}T_i 
