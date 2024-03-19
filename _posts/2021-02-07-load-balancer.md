@@ -18,26 +18,40 @@ available for our objects. The load on each line is done automatically depending
 
 **Terms**:
 
-$$ L_i: \text{The latency of line i} $$  
-$$ T_i: \text{The target ratio of line  i} $$  
-$$ R_i: \text{The latency ratio between the 'reference' line and the line i} $$  
+$$ 
+L_i: \text{The latency of line i} 
+$$  
+    
+$$ 
+T_i: \text{The target ratio of line  i} 
+$$  
+    
+$$ 
+R_i: \text{The latency ratio between the 'reference' line and the line i} 
+$$  
 
 ## Latency Ratio
 
 The latency ratio for a line is defined against the reference line.
 
-Let's $L_1$ be the reference Line, we have:
+Let's $$L_1$$ be the reference Line, we have:
 
-$$ R_1 = \dfrac{L_1}{L_1} = 1.0 $$  
-$$ R_2 = \dfrac{L_1}{L_2} = x $$  
-$$ R_3 = \dfrac{L_1}{L_3} = y $$  
+$$ 
+R_1 = \dfrac{L_1}{L_1} = 1.0 
+$$  
+$$ 
+R_2 = \dfrac{L_1}{L_2} = x 
+$$  
+$$ 
+R_3 = \dfrac{L_1}{L_3} = y 
+$$  
 
 For example:
 
-If $L_1 = 10ms$, $L2 = 15ms$, and $L3 = 19ms$, then we have:
+If $$L_1 = 10ms$$, $$L2 = 15ms$$, and $$L3 = 19ms$$, then we have:
 
-$$
-R_1 = 1.0 \\ R_2 = 0.67 \\ R_3 = 0.53
+$$ 
+R_1 = 1.0, R_2 = 0.67 and R_3 = 0.53
 $$
 
 ## Target Ratio
@@ -88,9 +102,17 @@ $$
 
 1. We compute the ratio of each lines:
 
-$$ R_1 = \dfrac{L_1}{L_1} = 1.00 $$  
-$$ R_2 = \dfrac{L_1}{L_2} = 0.67 $$  
-$$ R_3 = \dfrac{L_1}{L_3} = 0.53 $$  
+$$
+R_1 = \dfrac{L_1}{L_1} = 1.00 
+$$  
+
+$$ 
+R_2 = \dfrac{L_1}{L_2} = 0.67 
+$$  
+
+$$ 
+R_3 = \dfrac{L_1}{L_3} = 0.53 
+$$  
 
 
 1. From here, we can compute $T_1$:
@@ -101,13 +123,23 @@ $$
 
 1. Then each target ratio for the remaining lines
 
-$$ T_2 = T_1 \times R_2 = 0.46 \times 0.67 = 0.30 $$  
-$$ T_3 = T_1 \times R_3 = 0.46 \times 0.53 = 0.2 $$  
+$$ 
+T_2 = T_1 \times R_2 = 0.46 \times 0.67 = 0.30 
+$$  
+
+$$ 
+T_3 = T_1 \times R_3 = 0.46 \times 0.53 = 0.2 
+$$  
 
 For the last line, we can also compute $T_3$ with:
 
-$$ T_3 = 1 - \sum_{i=1}^{2}T_i $$  
-$$ T_3 = 1 - 0.46 - 0.30 = 0.24 $$
+$$ 
+T_3 = 1 - \sum_{i=1}^{2}T_i 
+$$  
+
+$$ 
+T_3 = 1 - 0.46 - 0.30 = 0.24 
+$$
 
 The producer will then use this new target ratio to dispatch orders on the proper line without manual intervention.
 
