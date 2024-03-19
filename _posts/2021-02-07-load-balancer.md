@@ -20,9 +20,9 @@ available for our objects. The load on each line is done automatically depending
 
 $$
 L_i: \text{The latency of line i}
-\\
+\\  
 T_i: \text{The target ratio of line  i}
-\\
+\\  
 R_i: \text{The latency ratio between the 'reference' line and the line i}
 $$
 
