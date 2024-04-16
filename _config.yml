@@ -125,7 +125,7 @@ googlefonts:
 
 # Theme and colors
 chulapa-skin: 
-  highlight     : "monokai"
+  highlight     : "default"
   skin         :  # Optional predefined skins
   autothemer    :  true # Bool: Use autotheming
   vars          :    
