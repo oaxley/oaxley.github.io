@@ -99,6 +99,8 @@ navbar:
   nav:
   - title   : Blog
     url     : /blog/
+  - title   : Docs
+    url     : /docs/
   - title   : Extras
     child   :
       - title : Tags
@@ -178,19 +180,19 @@ defaults:
       breadcrumb_list   :
         - label: Blog
           url: /blog/
-  # -
-  #   scope:
-  #     path: ""
-  #     type: "cheatsheet"
-  #   values:
-  #     header_type       : "hero"
-  #     show_bottomnavs   : true
-  #     show_sociallinks  : true
-  #     include_on_search : true
-  #     show_breadcrumb   : true
-  #     breadcrumb_list   :
-  #       - label: Cheatsheets
-  #         url: /cheatsheets
+  -
+    scope:
+      path: ""
+      type: "default"
+    values:
+      header_type       : "hero"
+      show_bottomnavs   : true
+      show_sociallinks  : true
+      include_on_search : true
+      show_breadcrumb   : true
+      breadcrumb_list   :
+        - label: Documentations
+          url: /docs
 
 
 # XX. Other settings - no need to modify
