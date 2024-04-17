@@ -100,7 +100,7 @@ navbar:
   - title   : Blog
     url     : /blog/
   - title   : Docs
-    url     : /docs/
+    url     : /docs
   - title   : Extras
     child   :
       - title : Tags
@@ -141,12 +141,12 @@ paginate_path: "/blog/page:num/"
 paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the paginator
 
 # Collections https://jekyllrb.com/docs/step-by-step/09-collections/
-# collections:
-#   cheatsheet:
-#     output: true
-#     permalink: /cheatsheets/:name
-# collections_dir     : 
-# permalink           : /:year:month:day_:title/
+collections:
+  cheatsheet:
+    output: true
+    permalink: /docs/:name
+collections_dir     : 
+permalink           : /:year:month:day_:title/
 
 
 # Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
@@ -183,7 +183,7 @@ defaults:
   -
     scope:
       path: ""
-      type: "default"
+      type: "cheatsheets"
     values:
       header_type       : "hero"
       show_bottomnavs   : true
@@ -192,7 +192,7 @@ defaults:
       show_breadcrumb   : true
       breadcrumb_list   :
         - label: Documentations
-          url: /docs/
+          url: /docs
 
 
 # XX. Other settings - no need to modify
