@@ -192,7 +192,7 @@ defaults:
       show_breadcrumb   : true
       breadcrumb_list   :
         - label: Documentations
-          url: /docs
+          url: /docs/
 
 
 # XX. Other settings - no need to modify
