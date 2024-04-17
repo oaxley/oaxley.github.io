@@ -1,6 +1,6 @@
 ---
 layout: indexcategory
-title: "Documentations"
+title: "Docs"
 include_collection: documentations
 permalink: /docs
 show_breadcrumb: true
