@@ -1,7 +1,9 @@
 ---
-layout: archive
+layout: indexcategory
+include_collection: doc
 permalink: /docs/
 title: "Technical Documentation"
+show_breadcrumb: true
 ---
 
 {% assign main_doc = site.docs | where: "type", "doc" | sort: "order" %}
