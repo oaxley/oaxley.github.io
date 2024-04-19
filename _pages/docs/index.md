@@ -17,8 +17,10 @@ show_breadcrumb: true
   </ul>
 </nav>
 
+<!--
 {% for doc in main_doc %}
 <h2><a href="{{ doc.url }}">{{ doc.title }}</a></h2>
 {{ doc.content }}
 <hr />
 {% endfor %}
+-->
