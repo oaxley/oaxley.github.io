@@ -4,6 +4,10 @@ remote_theme: dieghernan/chulapa
 
 # Chulapa docs: https://dieghernan.github.io/chulapa/docs/02-config
 
+#### example configuration file
+# https://github.com/mmistakes/made-mistakes-jekyll/blob/10.1.0/_config.yml
+####
+
 # A. Site Settings /SEO options
 # Overall options for your site, would affect your site SEO
 # Default values are explained
@@ -140,18 +144,19 @@ paginate: 6
 paginate_path: "/blog/page:num/"
 paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the paginator
 
-# Collections https://jekyllrb.com/docs/step-by-step/09-collections/
-collections:
-  cheatsheet:
-    output: true
-    permalink: /docs/:name
-collections_dir     : 
+# Permalink
 permalink           : /:year:month:day_:title/
 
+# Collections https://jekyllrb.com/docs/step-by-step/09-collections/
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
-  -
+
+  - 
     scope:
       path: ""
     values:
@@ -160,6 +165,7 @@ defaults:
       include_on_search   : false
       cloudtag_url        : /tags #This is where the link on tags would redirect
       cloudcategory_url   : /categories #This is where the link on categories would redirect
+
   -
     scope:
       path: ""
@@ -180,20 +186,13 @@ defaults:
       breadcrumb_list   :
         - label: Blog
           url: /blog/
+  
   -
     scope:
-      path: ""
-      type: "cheatsheets"
+      path: "_docs"
+      type: "docs"
     values:
-      header_type       : "hero"
-      show_bottomnavs   : true
-      show_sociallinks  : true
-      include_on_search : true
-      show_breadcrumb   : true
-      breadcrumb_list   :
-        - label: Documentations
-          url: /docs
-
+      layout: default
 
 # XX. Other settings - no need to modify
 # HTML Compression
