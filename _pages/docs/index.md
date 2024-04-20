@@ -9,7 +9,7 @@ show_breadcrumb: true
 {% assign main_doc = site.docs | where: "type", "doc" | sort: "order" %}
 
 <nav class="js-toc toc">
-<h4 class="toc__title"><span>Technical Documentation</span></h4>
+<h4 class="toc__title"><span>Today I learned...</span></h4>
   <ul class="toc__menu">
 {% for doc in main_doc %}
 <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
