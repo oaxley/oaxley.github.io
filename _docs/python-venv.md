@@ -17,12 +17,12 @@ $ python -m venv --prompt DUDe venv
 
 ``` bash
 $ source venv/bin/activate
-(DUDe) $
+(DUDe) $ 
 ```
 
 ### Deactivate the virtual environment
 
 ``` bash
 (DUDe) $ deactivate
-$
+$ 
 ```
