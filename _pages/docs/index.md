@@ -11,7 +11,14 @@ show_breadcrumb: true
 <nav class="js-toc toc">
 <h4 class="toc__title"><span>Today I learned...</span></h4>
   <ul class="toc__menu">
+{% assign old_subtype = "" %}
 {% for doc in main_doc %}
+
+{% if doc.subtype != old_subtype %}
+  <h4><span>{{ doc.subtype }}</span></h4>
+  {% assign old_subtype = doc.subtype %}
+{% endif %}
+
 <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
 {% endfor %}
   </ul>
