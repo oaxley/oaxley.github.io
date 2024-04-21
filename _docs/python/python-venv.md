@@ -1,7 +1,7 @@
 ---
 title: "Python Virtual Environment"
 type: doc
-subtype: python
+subtype: Python
 order: 1
 ---
 
