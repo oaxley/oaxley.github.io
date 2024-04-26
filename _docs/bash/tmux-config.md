@@ -2,7 +2,7 @@
 title: "Tmux configuration"
 type: doc
 subtype: Bash
-order: 1
+order: 2
 ---
 
 ## Alias

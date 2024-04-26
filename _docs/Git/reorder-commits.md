@@ -2,7 +2,7 @@
 title: "Reorder commits interactively"
 type: doc
 subtype: Git
-order: 2
+order: 3
 ---
 
 See [here](https://stackoverflow.com/questions/37471740/how-to-copy-commits-from-one-git-repo-to-another) for more details.

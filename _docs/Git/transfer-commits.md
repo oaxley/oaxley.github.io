@@ -2,7 +2,7 @@
 title: "Transfer commit from one repo to another one"
 type: doc
 subtype: Git
-order: 1
+order: 3
 ---
 
 ``` bash
